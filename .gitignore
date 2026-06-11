@@ -1,0 +1,17 @@
+node_modules/
+dist/
+**/target/
+**/.vite/
+*.log
+.DS_Store
+Thumbs.db
+*.lnk
+
+# AgentEye runtime outputs (captures, history, dev logs)
+agent_vision/
+!agent_vision/.gitkeep
+apps/host/src-tauri/agent_vision/
+
+# Local editor/system files
+.idea/
+.vscode/

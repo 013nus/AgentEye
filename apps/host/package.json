@@ -1,0 +1,37 @@
+{
+  "name": "@agenteye/host",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "vite:dev": "vite --host 0.0.0.0",
+    "vite:build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@agenteye/protocol": "0.1.0",
+    "@tauri-apps/api": "2.11.0",
+    "@tauri-apps/plugin-clipboard-manager": "2.3.2",
+    "@tauri-apps/plugin-fs": "2.5.1",
+    "@tauri-apps/plugin-global-shortcut": "2.3.2",
+    "@tauri-apps/plugin-opener": "2.5.4",
+    "@tauri-apps/plugin-positioner": "2.3.2",
+    "@tauri-apps/plugin-window-state": "2.4.1",
+    "lucide-react": "1.17.0",
+    "qrcode": "^1.5.4",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.11.2",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.1.2",
+    "typescript": "6.0.3",
+    "vite": "7.3.5"
+  }
+}

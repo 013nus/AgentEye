@@ -1,0 +1,46 @@
+[package]
+name = "agenteye-host"
+version = "0.1.0"
+description = "AgentEye Host desktop application."
+authors = ["AgentEye Contributors"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[lib]
+name = "agenteye_host_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[[bin]]
+name = "agenteye-host"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2.6.2", features = [] }
+
+[dependencies]
+anyhow = "1.0.100"
+axum = { version = "0.8.9", features = ["ws", "json"] }
+chrono = { version = "0.4.45", default-features = false, features = ["clock", "serde"] }
+futures-util = "0.3.32"
+image = { version = "0.25.10", default-features = false, features = ["jpeg", "png"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.150"
+tauri = { version = "2.11.2", features = ["tray-icon"] }
+tauri-plugin-clipboard-manager = "2.3.2"
+tauri-plugin-fs = "2.5.1"
+tauri-plugin-global-shortcut = "2.3.2"
+tauri-plugin-opener = "2.5.4"
+tauri-plugin-positioner = "2.3.2"
+tauri-plugin-window-state = "2.4.1"
+tokio = { version = "1.52.3", features = ["rt-multi-thread", "macros", "sync", "time", "fs"] }
+tower-http = { version = "0.6.11", features = ["cors", "trace"] }
+tracing = "0.1.44"
+tracing-subscriber = "0.3.22"
+window-vibrancy = "0.7.1"
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.62.2", features = [
+  "Win32_Foundation",
+  "Win32_Storage_FileSystem",
+  "Win32_UI_WindowsAndMessaging"
+] }

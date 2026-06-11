@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "AgentEye",
+  "version": "0.1.0",
+  "identifier": "dev.agenteye.host",
+  "build": {
+    "beforeDevCommand": "npm run vite:dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run vite:build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "label": "floating",
+        "title": "AgentEye",
+        "url": "index.html",
+        "width": 360,
+        "height": 640,
+        "minWidth": 300,
+        "minHeight": 480,
+        "resizable": true,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "center": true,
+        "visible": false,
+        "shadow": true
+      },
+      {
+        "label": "controls",
+        "title": "AgentEye Controls",
+        "url": "index.html?view=controls",
+        "width": 154,
+        "height": 42,
+        "minWidth": 154,
+        "minHeight": 42,
+        "resizable": false,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "center": false,
+        "visible": false,
+        "shadow": false
+      }
+    ]
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": ["icons/icon.ico"]
+  }
+}

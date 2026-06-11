@@ -1,0 +1,15 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Default AgentEye desktop capability set.",
+  "windows": ["floating", "controls"],
+  "permissions": [
+    "core:default",
+    "global-shortcut:default",
+    "clipboard-manager:default",
+    "fs:default",
+    "opener:default",
+    "window-state:default",
+    "positioner:default"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@agenteye/workspace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AgentEye monorepo: an AI-agent physical vision bridge for hardware engineers.",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "node tools/dev-all.mjs",
+    "dev:host": "node tools/dev-host.mjs",
+    "dev:phone": "npm run dev -w @agenteye/phone",
+    "dev:all": "node tools/dev-all.mjs",
+    "dev:stop": "powershell -ExecutionPolicy Bypass -File tools/stop-dev.ps1",
+    "clean": "powershell -ExecutionPolicy Bypass -File tools/clean.ps1",
+    "setup:network": "powershell -ExecutionPolicy Bypass -File tools/setup-windows-network.ps1",
+    "agenteye": "node tools/agenteye-cli.mjs",
+    "build": "npm run build -w @agenteye/host && npm run build -w @agenteye/phone",
+    "build:host": "npm run build -w @agenteye/host",
+    "build:phone": "npm run build -w @agenteye/phone",
+    "typecheck": "npm run typecheck -w @agenteye/host && npm run typecheck -w @agenteye/phone"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3"
+  }
+}

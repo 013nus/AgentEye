@@ -1,0 +1,1 @@
+{"default":{"identifier":"default","description":"Default AgentEye desktop capability set.","local":true,"windows":["floating","controls"],"permissions":["core:default","global-shortcut:default","clipboard-manager:default","fs:default","opener:default","window-state:default","positioner:default"]}}
